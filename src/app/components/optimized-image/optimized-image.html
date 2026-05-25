@@ -1,0 +1,4 @@
+<!-- Paso las varibales de size al css -->
+<button type="button" [style.--width]="image().size.width" [style.--height]="image().size.height">
+  <img [ngSrc]="image().url" fill [alt]="image().alt" [loading]="loading()" />
+</button>

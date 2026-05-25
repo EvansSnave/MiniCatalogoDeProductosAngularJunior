@@ -1,6 +1,7 @@
 <input 
   type="text"
-  placeholder="Titulo..."
+  name="search"
+  placeholder="Buscar..."
   (input)="updateQuery($event)"
 >
 
@@ -13,19 +14,19 @@
 }
 
 @else {
-  @for(product of filteredItems() ?? []; track product.id) {
-
-    <a [routerLink]="['/products', product.id]">
-      <img
-        [src]="product.image"
-        width="200"
-      />
-
-      <ul>
-        <li>{{product.title}}</li>
-        <li>{{product.price}}</li>
-        <li>{{product.category}}</li>
-      </ul>
-    </a>
-  }
+  <div class="products">
+    @for(product of filteredItems() ?? []; track product.id) {
+      <div class="product">
+        <a [routerLink]="['/products', product.id]">
+          <!-- Aqui uso mi custom image -->
+          <optimized-image [image]="{ url: product.image, alt: product.title, size: { width : '100%', height: '18vw' } }" />
+          <ul>
+            <li class="product-title">{{product.title}}</li>
+            <li>Price: {{product.price}}</li>
+            <li class="product-category">{{product.category}}</li>
+          </ul>
+        </a>
+      </div>
+    }
+  </div>
 }

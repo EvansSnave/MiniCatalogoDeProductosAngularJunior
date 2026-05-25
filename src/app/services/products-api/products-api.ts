@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { baseUrl } from '../../../environments/environment';
-import { ProductModel } from '../../interfaces/productModel';
 import { catchError, throwError } from 'rxjs';
-import { ProductsAPIError } from '../../interfaces/errors';
+import { ProductModel, ProductsAPIError } from '../../interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +17,7 @@ export class ProductsAPI {
       catchError(error => {
         console.log("Error en la API: ", error);
 
-        return throwError(() => new ProductsAPIError("Error al cargar todos los productos", error.status));
+        return throwError(() => new ProductsAPIError("Error al cargar todos los productos. Estado: " + error.status, error.status));
       })
     );
   }
@@ -28,7 +27,7 @@ export class ProductsAPI {
       catchError(error => {
         console.log("Error en la API: ", error);
 
-        return throwError(() => new ProductsAPIError("Error al cargar el producto con id " + id, error.status));
+        return throwError(() => new ProductsAPIError("Error al cargar el producto con id " + id + " .Estado: " + error.status, error.status));
       })
     );
   }

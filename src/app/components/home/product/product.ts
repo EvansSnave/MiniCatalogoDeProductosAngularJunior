@@ -2,10 +2,11 @@ import { Component, computed, inject, resource, signal } from '@angular/core';
 import { ProductsAPI } from '../../../services/products-api/products-api';
 import { firstValueFrom } from 'rxjs';
 import { RouterLink } from "@angular/router";
+import { OptimizedImage } from '../../optimized-image/optimized-image';
 
 @Component({
   selector: 'product',
-  imports: [RouterLink],
+  imports: [RouterLink, OptimizedImage],
   templateUrl: './product.html',
   styleUrl: './product.scss',
 })

@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+  box-sizing: border-box;
+  border-radius: 0;
+  color: black;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+main {
+  margin: 10px 0;
+  padding: 0 10vw;
+}
+
+
+img {
+  display: block;
+}
+
+.product-category {
+  background-color: rgba(221, 66, 66, 0.281);
+  padding: 5px 15px;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.error {
+  font-size: xx-large;
+  color: red;
+}
+
+.warning {
+  font-size: xx-large;
+  color: grey;
+}

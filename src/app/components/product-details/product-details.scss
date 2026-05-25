@@ -1,0 +1,29 @@
+img {
+  margin: 10% 0;
+}
+
+div {
+  display: flex;
+  gap: 2%;
+}
+
+h1 {
+  margin-bottom: 5vw;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.price {
+  font-size: xxx-large;
+  color: coral;
+  margin-top: 10%;
+}
+
+.rating {
+  font-weight: 600;
+  margin-bottom: 5%;
+}

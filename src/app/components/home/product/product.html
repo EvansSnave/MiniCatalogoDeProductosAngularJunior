@@ -1,0 +1,35 @@
+<input 
+  type="text"
+  name="search"
+  placeholder="Buscar..."
+  (input)="updateQuery($event)"
+>
+
+@if(products.isLoading()) {
+  <p class="warning">Cargando productos...</p>
+}
+
+@else if(products.error()) {
+  <p class="error">Hubo un error: {{ products.error()?.message }}</p>
+}
+
+@else {
+  <div class="products">
+    @if((filteredItems()?.length ?? 0) <= 0) {
+      <p class="warning">Sin resultados para: {{searchQuery()}}</p>
+    }
+    @for(product of filteredItems(); track product.id) {
+      <div class="product">
+        <a [routerLink]="['/products', product.id]">
+          <!-- Aqui uso mi custom image -->
+          <optimized-image [image]="{ url: product.image, alt: product.title, size: { width : '100%', height: '18vw' } }" />
+          <ul>
+            <li class="product-title">{{product.title}}</li>
+            <li>Price: {{product.price}}</li>
+            <li class="product-category">{{product.category}}</li>
+          </ul>
+        </a>
+      </div>
+    }
+  </div>
+}

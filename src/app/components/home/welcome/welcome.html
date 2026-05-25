@@ -1,1 +1,25 @@
-<p>welcome works!</p>
+<optimized-image [image]="{ url: 'assets/banner.webp', alt: 'Banner', size: { width : '100%', height: '18vw' } }" />
+<h1>Prueba tecnica - Kevin Cruz</h1>
+<br>
+<article>
+  Esta aplicación consiste en una tienda virtual sencilla que permite visualizar una lista de productos obtenidos desde una API. 
+  Cada producto muestra información básica como el título, el precio, la categoría y una imagen representativa. El objetivo principal de la 
+  aplicación es ofrecer una experiencia clara e intuitiva para navegar entre distintos productos de manera rápida y organizada.
+  <br><br>
+  La página principal contiene un listado dinámico de productos que se cargan automáticamente desde el servidor. Cada elemento se presenta como 
+  una tarjeta interactiva que incluye una imagen optimizada, el nombre del producto y su precio correspondiente. Gracias al sistema de rutas de la aplicación, al hacer 
+  clic sobre cualquier producto el usuario es dirigido a una página independiente donde puede visualizar información más detallada del artículo seleccionado.
+  <br><br>
+  La vista de detalles del producto permite mostrar datos adicionales como la descripción completa, el precio, la categoría y una imagen de mayor tamaño. Esta sección 
+  ofrece una experiencia más enfocada para que el usuario pueda consultar información específica antes de tomar una decisión. La navegación entre páginas se realiza de 
+  forma dinámica sin necesidad de recargar completamente la aplicación.
+  <br><br>
+  Además, la aplicación incorpora un buscador que permite filtrar los productos en tiempo real 
+  mediante el título. A medida que el usuario escribe en el campo de búsqueda, la lista se actualiza automáticamente mostrando únicamente los productos que 
+  coinciden con el texto ingresado. En caso de no encontrarse resultados, la aplicación muestra un mensaje indicando que no existen productos relacionados con la 
+  búsqueda realizada.
+  <br><br>
+  La aplicación también implementa manejo de estados como carga de datos y control de errores al consumir la API. Mientras los productos se 
+  obtienen desde el servidor, se muestra un mensaje de carga, y si ocurre algún problema durante la petición se informa al usuario mediante mensajes de error 
+  personalizados. Esto mejora la experiencia general y hace que la aplicación sea más robusta y fácil de utilizar.
+</article>

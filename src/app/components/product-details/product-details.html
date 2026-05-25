@@ -1,9 +1,9 @@
 @if(product.isLoading()) {
-  <p>Cargando producto...</p>
+  <p class="warning">Cargando producto...</p>
 }
 
 @else if(product.error()) {
-  <p>Hubo un error: {{ product.error()?.message }}</p>
+  <p class="error">Hubo un error: {{ product.error()?.message }}</p>
 }
 
 @else if(product.value(); as product) {

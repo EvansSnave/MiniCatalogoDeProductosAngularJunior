@@ -6,17 +6,17 @@
 >
 
 @if(products.isLoading()) {
-  <p>Cargando productos...</p>
+  <p class="warning">Cargando productos...</p>
 }
 
 @else if(products.error()) {
-  <p>Hubo un error: {{ products.error()?.message }}</p>
+  <p class="error">Hubo un error: {{ products.error()?.message }}</p>
 }
 
 @else {
   <div class="products">
     @if((filteredItems()?.length ?? 0) <= 0) {
-      <p>Sin resultados para: {{searchQuery()}}</p>
+      <p class="warning">Sin resultados para: {{searchQuery()}}</p>
     }
     @for(product of filteredItems(); track product.id) {
       <div class="product">

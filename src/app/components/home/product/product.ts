@@ -1,20 +1,21 @@
 import { Component, computed, inject, resource, signal } from '@angular/core';
-import { Products } from '../../../services/products/products';
+import { ProductsAPI } from '../../../services/products-api/products-api';
 import { firstValueFrom } from 'rxjs';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'product',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './product.html',
   styleUrl: './product.scss',
 })
 export class Product {
   // Servicio para obtener los productos
-  productService = inject(Products);
+  productService = inject(ProductsAPI);
 
   // Array de productos desde la API
   products = resource({
-    loader: () => firstValueFrom(this.productService.getProduct())
+    loader: () => firstValueFrom(this.productService.getProducts())
   });
 
   // Señal de busqueda

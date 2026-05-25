@@ -5,7 +5,7 @@
 >
 
 @for(product of filteredItems(); track product) {
-  <div>
+  <a [routerLink]="['/products', product.id]">
     <img
       [src]="product.image"
       width="200"
@@ -15,5 +15,5 @@
       <li>{{product.price}}</li>
       <li>{{product.category}}</li>
     </ul>
-  </div>
+  </a>
 }

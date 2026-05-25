@@ -6,9 +6,14 @@ import { ProductModel } from '../../interfaces/productModel';
 @Injectable({
   providedIn: 'root',
 })
-export class Products {
+export class ProductsAPI {
   private http = inject(HttpClient);
-  getProduct() {
+  
+  getProducts() {
     return this.http.get<ProductModel[]>(baseUrl + "products");
+  }
+
+  getProductDetails(id: number) {
+    return this.http.get<ProductModel>(baseUrl + "products/" + id);
   }
 }

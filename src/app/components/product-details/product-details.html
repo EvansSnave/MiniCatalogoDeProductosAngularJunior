@@ -1,0 +1,14 @@
+@if(product.value(); as product) {
+  <h1>{{ product.title }}</h1>
+  <img
+    [src]="product.image"
+    width="300"
+  />
+  <ul>
+    <li>{{ product.price }}</li>
+    <li>{{ product.description }}</li>
+    <li>{{ product.category }}</li>
+    <li>{{ product.rating.rate }}</li>
+    <li>{{ product.rating.count }}</li>
+  </ul>
+}

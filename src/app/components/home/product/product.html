@@ -4,16 +4,28 @@
   (input)="updateQuery($event)"
 >
 
-@for(product of filteredItems(); track product) {
-  <a [routerLink]="['/products', product.id]">
-    <img
-      [src]="product.image"
-      width="200"
-    />
-    <ul>
-      <li>{{product.title}}</li>
-      <li>{{product.price}}</li>
-      <li>{{product.category}}</li>
-    </ul>
-  </a>
+@if(products.isLoading()) {
+  <p>Cargando productos...</p>
+}
+
+@else if(products.error()) {
+  <p>Hubo un error: {{ products.error()?.message }}</p>
+}
+
+@else {
+  @for(product of filteredItems() ?? []; track product.id) {
+
+    <a [routerLink]="['/products', product.id]">
+      <img
+        [src]="product.image"
+        width="200"
+      />
+
+      <ul>
+        <li>{{product.title}}</li>
+        <li>{{product.price}}</li>
+        <li>{{product.category}}</li>
+      </ul>
+    </a>
+  }
 }

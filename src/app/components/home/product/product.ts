@@ -22,11 +22,13 @@ export class Product {
   searchQuery = signal("");
 
   filteredItems = computed(() => {
-    // Pasar la pusqueda a minuscula
+    // Pasar la busqueda a minuscula
     const query = this.searchQuery().toLowerCase();
+    // Filtrar el titulo de los productos
     return this.products.value()?.filter(product => product.title.toLowerCase().includes(query));
   });
 
+  // Funcion para sincronizar el valor de input con searchQuery
   updateQuery(event: Event) {
     const input = event.target as HTMLInputElement;
     this.searchQuery.set(input.value);

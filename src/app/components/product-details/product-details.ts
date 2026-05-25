@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './product-details.scss',
 })
 export class ProductDetails {
-  productService = inject(ProductsAPI);
+  private productService = inject(ProductsAPI);
   private route = inject(ActivatedRoute);
 
   product = resource({

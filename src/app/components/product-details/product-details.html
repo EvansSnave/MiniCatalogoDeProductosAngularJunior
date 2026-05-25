@@ -1,4 +1,12 @@
-@if(product.value(); as product) {
+@if(product.isLoading()) {
+  <p>Cargando producto...</p>
+}
+
+@else if(product.error()) {
+  <p>Hubo un error: {{ product.error()?.message }}</p>
+}
+
+@else if(product.value(); as product) {
   <h1>{{ product.title }}</h1>
   <img
     [src]="product.image"

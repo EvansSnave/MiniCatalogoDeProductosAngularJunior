@@ -15,7 +15,10 @@
 
 @else {
   <div class="products">
-    @for(product of filteredItems() ?? []; track product.id) {
+    @if((filteredItems()?.length ?? 0) <= 0) {
+      <p>Sin resultados para: {{searchQuery()}}</p>
+    }
+    @for(product of filteredItems(); track product.id) {
       <div class="product">
         <a [routerLink]="['/products', product.id]">
           <!-- Aqui uso mi custom image -->

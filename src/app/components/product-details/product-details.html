@@ -8,15 +8,13 @@
 
 @else if(product.value(); as product) {
   <h1>{{ product.title }}</h1>
-  <img
-    [src]="product.image"
-    width="300"
-  />
-  <ul>
-    <li>{{ product.price }}</li>
-    <li>{{ product.description }}</li>
-    <li>{{ product.category }}</li>
-    <li>{{ product.rating.rate }}</li>
-    <li>{{ product.rating.count }}</li>
-  </ul>
+  <div>
+    <optimized-image [image]="{ url: product.image, alt: product.title, size: { width : '45vw', height: '30vw' } }" />
+    <ul>
+      <li class="price">{{ product.price }}$</li>
+      <li>{{ product.description }}</li>
+      <li class="rating">Calificacion: {{ product.rating.rate }}</li>
+      <li class="product-category">{{ product.category }}</li>
+    </ul>
+  </div>
 }

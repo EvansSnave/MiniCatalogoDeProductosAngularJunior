@@ -1,3 +1,19 @@
-<div>
-  <img>
-</div>
+<input 
+  type="text"
+  placeholder="Titulo..."
+  (input)="updateQuery($event)"
+>
+
+@for(product of filteredItems(); track product) {
+  <div>
+    <img
+      [src]="product.image"
+      width="200"
+    />
+    <ul>
+      <li>{{product.title}}</li>
+      <li>{{product.price}}</li>
+      <li>{{product.category}}</li>
+    </ul>
+  </div>
+}

@@ -1,59 +1,47 @@
-# Catalog
+<div align="center">
+  <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/9a7a3609-ecbc-4227-93e6-38619835aafa" />
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+  <h1>Mini Catalogo - Kevin Cruz</h1>
+  
+  <p>
+    Mini catalogo sencillo Angular 20
+  </p>
+</div>
 
-## Development server
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: Contenido
 
-To start a local development server, run:
+- [Acerca del proyecto](#star2-acerca-del-proyecto)
+- [Instalacion](#gear-instalacion)
+- [Contacto](#handshake-contacto)
+
+<!-- About the Project -->
+## :star2: Acerca del proyecto
+
+<img width="1904" height="947" alt="image" src="https://github.com/user-attachments/assets/3263b2c4-611c-49c3-abc5-24e6eaa103d8" />
+
+Esta aplicación consiste en una tienda virtual sencilla que permite visualizar una lista de productos obtenidos desde una API. Cada producto muestra información básica como el título, el precio, la categoría y una imagen representativa. El objetivo principal de la aplicación es ofrecer una experiencia clara e intuitiva para navegar entre distintos productos de manera rápida y organizada.
+
+<img width="1913" height="946" alt="image" src="https://github.com/user-attachments/assets/df9f7617-3d21-49ad-975c-9b5e6fa93bde" />
+
+<!-- Installation -->
+### :gear: Instalacion
+
+Para empezar, se necesita tener node.js v20.19.0 o mayor, Angular Cli 21.2.12 o mayor y npm. Al abir el proyecto usar
+
+```bash
+npm i
+```
+para instalar las dependencias. Despues usar Angular Cli con el comando 
 
 ```bash
 ng serve
 ```
+para inciar el servidor. El navegador se deberia abrir en `http://localhost:4200/` donde la aplicacion se puede encontrar.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+<!-- Contact -->
+## :handshake: Contacto
 
-## Code scaffolding
+Kevin Cruz - [LinkedIn](www.linkedin.com/in/kevin-cruz-developer) - cruzk1257@gmail.com
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Link al proyecto en Github [aqui](https://github.com/EvansSnave/MiniCatalogoDeProductosAngularJunior)
